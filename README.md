@@ -79,7 +79,7 @@ Follow these steps to deploy your own automated web server:
     echo "<h1>Hello from Ejike's Automated EC2 Web Server!</h1>" | sudo tee /var/www/html/index.html
     
 
-    ![User Data Script](automated web browser.png)
+    ![my ec2 instant.png](automated web browser.png)
 
 5.  *Launch the Instance:*
     * Review all your settings and click "Launch instance."
