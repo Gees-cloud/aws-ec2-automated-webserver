@@ -52,20 +52,19 @@ Follow these steps to deploy your own automated web server:
     * Select *Ubuntu Server 22.04 LTS (HVM) - Free tier eligible* as your AMI.
     * Choose t3.micro as the instance type (Free Tier eligible).
 
-    ![AMI and Instance Type Selection](path/to/your/ami_instance_type_screenshot.png)
-    (Note:* Replace path/to/your/... with the actual path or URL of your image once uploaded to GitHub or an image host.)*
+    ![AMI and Instance Type Selection](my ec2 instance.png)
 
 2.  *Configure Key Pair:*
     * Select an existing key pair or create a new one (remember to download the .pem file if creating new).
 
-    !SecurityGroup_EC2_eu-north-1.png
+    ![Key Pair Selection](SecurityGroup_EC2_eu-north-1_-_key-pair.png)
 
 3.  *Set Up Security Group:*
     * Create a new Security Group (e.g., web-server-sg) or select an existing one with the necessary inbound rules.
     * Add an *SSH (Port 22)* rule (Source: My IP for security).
     * Add an *HTTP (Port 80)* rule (Source: Anywhere (0.0.0.0/0) for web access).
 
-    ![Security Group Rules](path/to/your/security_group_screenshot.png)
+    ![Security Group Rules](SecurityGroup_EC2_eu-north-1_.png)
 
 4.  *Add User Data Script:*
     * Scroll down to the "Advanced details" section during instance launch.
@@ -80,7 +79,7 @@ Follow these steps to deploy your own automated web server:
     echo "<h1>Hello from Ejike's Automated EC2 Web Server!</h1>" | sudo tee /var/www/html/index.html
     
 
-    ![User Data Script](path/to/your/user_data_screenshot.png)
+    ![User Data Script](automated web browser.png)
 
 5.  *Launch the Instance:*
     * Review all your settings and click "Launch instance."
@@ -90,13 +89,13 @@ Follow these steps to deploy your own automated web server:
 1.  *Monitor Instance State:*
     * Navigate to the EC2 Instances page. Your MyAutomatedWebserver instance should transition to the running state within a few minutes.
 
-    ![Running Instance on Dashboard](path/to/your/running_instance_dashboard_screenshot.png)
+    ![Running Instance on Dashboard](my ec2 instance running.png)
 
 2.  *Access Web Server:*
     * Copy the *Public IPv4 address* of your running instance.
     * Paste this IP address into your web browser. You should see the "Hello" message.
 
-    ![Live Website in Browser](path/to/your/live_website_screenshot.png)
+    ![Live Website in Browser](IPv4 Public DNS.png)
 
 ## Clean Up (Important!)
 
@@ -111,5 +110,3 @@ To avoid incurring any charges, remember to *terminate your EC2 instance* after 
 For a more detailed walkthrough, deeper explanations, and insights into this project, check out my full blog post:
 
 [*Automating Your First Server: Hosting a Web Page on AWS EC2 with User Data - GreenTechGuru Online*](https://greentechguruonline.wordpress.com/your-ec2-blog-post-url-here/)
-
----
