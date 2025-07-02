@@ -58,7 +58,7 @@ Follow these steps to deploy your own automated web server:
 2.  *Configure Key Pair:*
     * Select an existing key pair or create a new one (remember to download the .pem file if creating new).
 
-    ![Key Pair Selection](path/to/your/key_pair_screenshot.png)
+    !SecurityGroup_EC2_eu-north-1.png
 
 3.  *Set Up Security Group:*
     * Create a new Security Group (e.g., web-server-sg) or select an existing one with the necessary inbound rules.
